@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USER SIGNUP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <fieldset>
+          <legend>Autentication with session storage</legend>
+          <dl>
+            <dt>USER NAME</dt>
+            <dd>
+              <input type="text" name="" id="name" class="form-control" placeholder="User Name">
+            </dd>
+          </dl>
+          <dl>
+            <dt>Email</dt>
+            <dd>
+              <input type="text" name="" id="email" class="form-control" placeholder="Email">
+            </dd>
+          </dl>
+          <dl>
+            <dt>Password</dt>
+            <dd>
+              <input type="password" name="" id="psw" class="form-control" placeholder="1234">
+            </dd>
+          </dl>
+          <dl>
+            <dt></dt>
+            <dd>
+              <button class="btn btn-success" onclick="signup()">
+                <span class="bi bi-box-arrow-in-right"></span> SIGNUP
+              </button>
+            </dd>
+          </dl>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function signup() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var psw = document.getElementById("psw").value;
+
+    sessionStorage.setItem("name1", name);
+    sessionStorage.setItem("email1", email);
+    sessionStorage.setItem("psw1", psw);
+    window.location.href = "login.html";
+  }
+</script>
+
+</html>
